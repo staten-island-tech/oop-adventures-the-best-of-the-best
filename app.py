@@ -6,8 +6,10 @@ class villian:
         self.dialogue = dialogue
     
     def steal(self,item):
-        self.inventory.append(item)
-        print(King_of_Yam.__dict__)
+        stealing = input("Do you want to steal from the Humble Potato?(yes/no)")
+        if stealing == "yes":
+            self.inventory.append(item)
+            print(King_of_Yam.__dict__)
 
 King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], ["Hp" == 500, "Hunger" == 100, "Atk" == 500], ["I'm am the all mighty King of Yam"])
 print(King_of_Yam.__dict__)
