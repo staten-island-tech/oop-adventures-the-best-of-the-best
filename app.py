@@ -37,7 +37,7 @@ class villian:
         else: 
             print("Character unfound! Please type an valid name")
 
-    def live(self,Hp):
+    def living(self,Hp):
         if Hp <= 50:
             print(f"He is at low health. This is his stats {self.stats}" )
         elif Hp == 0:
