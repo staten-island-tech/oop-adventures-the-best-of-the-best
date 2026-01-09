@@ -1,9 +1,10 @@
 class villian:
-    def __init__(self, name, inventory, stats, dialogue):
+    def __init__(self, name, inventory, stats, dialogue, live):
         self.name = name
         self.inventory = inventory
         self.stats = stats
         self.dialogue = dialogue
+        self.live = live
     
     def steal(self,item):
         stealing = input("Do you want to steal from the Humble Potato?(yes/no)").lower()
@@ -36,7 +37,16 @@ class villian:
         else: 
             print("Character unfound! Please type an valid name")
 
-King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], ["Hp" == 500, "Atk" == 250], ["I'm am the all mighty King of Yam"])
+    def live(self,Hp):
+        if Hp <= 50:
+            print(f"He is at low health. This is his stats {self.stats}" )
+        elif Hp == 0:
+            self.live == False
+            print("He is dead")
+        else:
+            print(f"He is ok. This is his stats{self.stats}")
+
+King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], ["Hp" == 500, "Atk" == 250], ["I'm am the all mighty King of Yam"], True)
 print(King_of_Yam.__dict__)
 
 
