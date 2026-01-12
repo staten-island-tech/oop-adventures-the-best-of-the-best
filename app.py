@@ -1,4 +1,5 @@
 import random
+import
 class npc:
     def _init_(self, name, dialogue, quest, inventory):
         self.name = name
@@ -33,6 +34,6 @@ class anpc:
         self.talk
         print("thank yoaus kind sire")
         self.stats -= 5
-
+        
 
 sick_potato = npc("sick Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["Hello young lad!"], ["radish", "groceries","money"])
