@@ -1,5 +1,4 @@
 import random
-import
 class npc:
     def _init_(self, name, dialogue, quest, inventory):
         self.name = name
@@ -11,7 +10,10 @@ class npc:
         inventory = []
 
     def activity(self):
-        print("nahaha")
+        random.choices(self.quest)
+        print(random.choice)
+        bigchoice = input("what do you want to do?")
+        if big
 
     def robbery(self):
         random.choices(self.inventory)
@@ -24,7 +26,6 @@ class npc:
 
 Humble_Potato = npc("Humble Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["Hello young lad!"], ["radish", "groceries","money"])        
 
-# "Thank you, with such gratitude and grace, for accepting request young, kind lad."
 class anpc:
     def _init_(self):
         self.name = anpc
@@ -36,4 +37,4 @@ class anpc:
         self.stats -= 5
         
 
-sick_potato = npc("sick Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["Hello young lad!"], ["radish", "groceries","money"])
+sick_potato = npc("sick Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["i am humble potato. i see to have a request for you young lad! My radish seems to have been gone for some time, can you help me find her?"], ["radish", "groceries","money"])
