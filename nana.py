@@ -11,4 +11,7 @@ class merchant:
         money = 12000
 
     def welcome(self):
-        ran
+        random.choice(self.dialogue)
+        mc.enter
+        print("Go ahead! take your time chap!")
+        mc.buy
