@@ -7,6 +7,7 @@ class villian:
         self.live = live
     
     def steal(self,item):
+        print("Let's steal")
         stealing = input("Do you want to steal from the Humble Potato?(yes/no)").lower()
         if stealing.lower() == "yes":
             self.inventory.append(item)
@@ -17,6 +18,7 @@ class villian:
             print("Unvalid choice! Please put a yes or no")
 
     def fight(self):
+            print("You see that guy over there?")
             fight = input("Do you want to fight the Waverly Potato?(yes/no)").lower()
             while fight.lower() == "yes":
                 self.Hp-= 20
@@ -29,6 +31,7 @@ class villian:
                 print("Unvalid choice! Please put a yes/no")
     
     def talk(self):
+        print("Hey you see that potato. Let's go up to them")
         speak = input("Who do you want to interact with?").lower()
         if speak.lower() == "Waverly Potato":
             print("Let's fight! I am so much better than you")
@@ -45,8 +48,9 @@ class villian:
             print("He is dead")
         else:
             print(f"He is ok. This is his stats{self.Hp}")
-
+        
 King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], 500, ["I'm am the all mighty King of Yam"], True)
+activites = input("What do you want to do?")
 print(King_of_Yam.__dict__)
 
 
