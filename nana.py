@@ -1,4 +1,5 @@
-inport random
+import random
+
 class merchant:
     def __init__(self, name, stock, dialogue, money):
         self.name = name
