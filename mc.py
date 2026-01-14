@@ -1,6 +1,6 @@
 import random
 import app
-# import villian
+import villian
 import nana
 
 class mc:
@@ -62,11 +62,11 @@ class mc:
         nana
 
 
-    def start(self):
-        speak = input("The King of Yam is going to take this village prisoner. Help them!")
-        print("Humble Potato wants to talk to you. Do you approach? y/n ")
-        if speak == "y":
-            print(self.talk)
+    
+    speak = input("The King of Yam is going to take this village prisoner. Help them!")
+    speak = input("Humble Potato wants to talk to you. Do you approach? y/n ")
+    if speak == "y":
+print(self.talk)
         
 
 
