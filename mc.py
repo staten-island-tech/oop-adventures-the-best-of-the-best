@@ -5,8 +5,8 @@ class mc:
         self.health = health
        
     def heal(self):
-        print("Would you like to heal? y/n")
-        choose = input
+        print("Would you like to heal?")
+        choose = input("y/n")
         if choose == "y":
             Hp += 10
         if choose == "n":
@@ -15,8 +15,8 @@ class mc:
             print("That is not a choice u dum")
 
     def talk(self):
-        speak = input
-        print("Do you want to approach? y/n")
+        print("Do you want to approach?")
+        speak = input("y/n")
         if speak == "y":
             print("I am humble potato. I seem to have a request for you young lad! My radish seems to have been gone for some time, can you help me find her? Press_Enter to find radish.")
         if speak == "n":
@@ -25,8 +25,8 @@ class mc:
             print("That is not a choice u dum")
 
     def fight(self):
-        print(f"{self.name}, would you like to fight? y/n")
-        choose = input
+        print(f"{self.name}, would you like to fight?")
+        choose = input("y/n")
         if "y":
             print(f"{self.name}'s health is at {self.health}.") 
             Hp -= 5
@@ -53,7 +53,9 @@ class mc:
         print("That is not a choice u dum")
 
     
-def start()
+    
+        
+
 
 
         
