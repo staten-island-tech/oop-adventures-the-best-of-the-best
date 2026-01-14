@@ -1,4 +1,5 @@
 import random
+import mc
 class npc:
     def _init_(self, name, dialogue, quest, inventory):
         self.name = name
@@ -12,9 +13,8 @@ class npc:
     def activity(self):
         random.choices(self.quest)
         print(random.choice)
-        bigchoice = input("what do you want to do?")
-        if big
-
+        self.talk
+            
     def robbery(self):
         random.choices(self.inventory)
         if random.choice == "radish":
@@ -32,9 +32,8 @@ class anpc:
 
     def infect(self):
         print("big cough, help me get medicine psl")
-        self.talk
+        mc.talk
         print("thank yoaus kind sire")
         self.stats -= 5
         
-
 sick_potato = npc("sick Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["i am humble potato. i see to have a request for you young lad! My radish seems to have been gone for some time, can you help me find her?"], ["radish", "groceries","money"])
