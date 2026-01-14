@@ -11,9 +11,13 @@ class npc:
         inventory = []
 
     def activity(self):
+        random.choices(self.dialogue)
+        print(random.choice)
         random.choices(self.quest)
         print(random.choice)
-        self.talk
+    
+    def rejected(self):
+        print("Goodbye! Thank you young lad!")
             
     def robbery(self):
         random.choices(self.inventory)
