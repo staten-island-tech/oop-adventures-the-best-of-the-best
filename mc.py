@@ -1,11 +1,12 @@
+import random
 import app
-import villian
+# import villian
+import nana
 
 class mc:
-
     def __init__(self, name, inventory, health):
         self.name = name
-        self.inventory = inventory
+        self.inventory = []
         self.health = health
        
     def heal(self):
@@ -57,6 +58,8 @@ class mc:
         else:
           print("That is not a choice u dum")
 
+    def buy(self):
+        nana
 
 
     def start(self):
