@@ -21,7 +21,7 @@ class villian:
             print("You see that guy over there?")
             fight = input("Do you want to fight the Waverly Potato?(yes/no)").lower()
             while fight.lower() == "yes":
-                self.Hp-= 20
+                self.Hp -= 20
                 self.fight
                 break
             if fight.lower() == "no":
