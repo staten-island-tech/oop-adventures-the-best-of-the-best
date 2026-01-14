@@ -1,8 +1,8 @@
 class villian:
-    def __init__(self, name, inventory, stats, dialogue, live):
+    def __init__(self, name, inventory, Hp, dialogue, live):
         self.name = name
         self.inventory = inventory
-        self.stats = stats
+        self.Hp = Hp
         self.dialogue = dialogue
         self.live = live
     
@@ -19,11 +19,11 @@ class villian:
     def fight(self):
             fight = input("Do you want to fight the Waverly Potato?(yes/no)").lower()
             while fight.lower() == "yes":
-                Hp -= 20
+                self.Hp-= 20
                 self.fight
                 break
             if fight.lower() == "no":
-                print(f"Hp" in {self.stats})
+                print(f"This is his Hp:{self.Hp}")
                 self.fight
             else:
                 print("Unvalid choice! Please put a yes/no")
@@ -37,16 +37,16 @@ class villian:
         else: 
             print("Character unfound! Please type an valid name")
 
-    def living(self,Hp):
-        if 20 <= Hp <= 50:
+    def living(self):
+        if 20 <= self.Hp <= 50:
             print(f"He is at low health. This is his stats {self.stats}" )
-        elif Hp <= 0:
+        elif self.Hp <= 0:
             self.live == False
             print("He is dead")
         else:
             print(f"He is ok. This is his stats{self.stats}")
 
-King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], ["Hp" = 500, "Atk" = 250], ["I'm am the all mighty King of Yam"], True)
+King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], 500, ["I'm am the all mighty King of Yam"], True)
 print(King_of_Yam.__dict__)
 
 
