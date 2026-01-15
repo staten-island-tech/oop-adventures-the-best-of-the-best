@@ -43,9 +43,9 @@ class Villian:
             self.live = False
             print("He is dead")
         elif 20 <= self.Hp <= 50:
-            print(f"He is at low health. Stats: {self.Hp}")
+            print(f"He is at low health. Hp: {self.Hp}")
         else:
-            print(f"He is ok. Stats: {self.Hp}")
+            print(f"He is ok. Hp: {self.Hp}")
 
 
 King_of_Yam = Villian("King of Yam", ["Prisoners of Yam"], 500, ["I am the all mighty King of Yam"], True)
@@ -54,7 +54,7 @@ while King_of_Yam.live:
     activity = input("What do you want to do? (steal/fight/talk/living/quit) ").lower()
     
     if activity == "steal":
-        King_of_Yam.steal("Gold Coin")
+        King_of_Yam.steal("")
     elif activity == "fight":
         King_of_Yam.fight()
     elif activity == "talk":
