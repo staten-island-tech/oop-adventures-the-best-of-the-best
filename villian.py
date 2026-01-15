@@ -23,7 +23,7 @@ class Villian:
             print(f"You attacked! Hp is now {self.Hp}")
             if self.Hp <= 0:
                 self.live = False
-                print("The villain is dead!")
+                print("King of Yam is dead!")
         elif fight == "no":
             print(f"The villain's Hp is {self.Hp}")
         else:
@@ -42,8 +42,6 @@ class Villian:
         if self.Hp <= 0:
             self.live = False
             print("He is dead")
-        elif 20 <= self.Hp <= 50:
-            print(f"He is at low health. Hp: {self.Hp}")
         else:
             print(f"He is ok. Hp: {self.Hp}")
 
