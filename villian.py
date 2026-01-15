@@ -59,15 +59,13 @@ while King_of_Yam.live:
         King_of_Yam.fight()
     elif activity == "talk":
         King_of_Yam.talk()
-    # elif activity == "living":
-    #     King_of_Yam.living()
     elif activity == "quit":
-        print("Exiting the game. Bye!")
+        print("OK bro")
         break
     else:
         print("Invalid choice. Try again!")
 
-print("ok bruh!")
+print("Bye!")
 
 
 
