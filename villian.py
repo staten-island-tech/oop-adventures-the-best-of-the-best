@@ -10,7 +10,7 @@ class Villian:
         stealing = input("Do you want to steal from the Humble Potato? (yes/no) ").lower()
         if stealing == "yes":
             self.inventory.append(item)
-            print(f"You stole {item}!\nCurrent Inventory: {self.inventory}")
+            print(f"You stole {item}! Current Inventory: {self.inventory}")
         elif stealing == "no":
             print("Ok, whatever.")
         else:
@@ -51,16 +51,16 @@ class Villian:
 King_of_Yam = Villian("King of Yam", ["Prisoners of Yam"], 500, ["I am the all mighty King of Yam"], True)
 
 while King_of_Yam.live:
-    activity = input("What do you want to do? (steal/fight/talk/living/quit) ").lower()
+    activity = input("What do you want to do? (steal/fight/talk/quit) ").lower()
     
     if activity == "steal":
-        King_of_Yam.steal("")
+        King_of_Yam.steal("radish")
     elif activity == "fight":
         King_of_Yam.fight()
     elif activity == "talk":
         King_of_Yam.talk()
-    elif activity == "living":
-        King_of_Yam.living()
+    # elif activity == "living":
+    #     King_of_Yam.living()
     elif activity == "quit":
         print("Exiting the game. Bye!")
         break
