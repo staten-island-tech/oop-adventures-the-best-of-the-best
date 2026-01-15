@@ -1,3 +1,5 @@
+import mc
+import app
 class villian:
     def __init__(self, name, inventory, Hp, dialogue, live):
         self.name = name
@@ -10,6 +12,7 @@ class villian:
         print("Let's steal")
         stealing = input("Do you want to steal from the Humble Potato?(yes/no)").lower()
         if stealing.lower() == "yes":
+            app.robbery
             self.inventory.append(item)
             print(King_of_Yam.__dict__)
         elif stealing.lower() == "no":
@@ -19,7 +22,7 @@ class villian:
 
     def fight(self):
             print("You see that guy over there?")
-            fight = input("Do you want to fight the Waverly Potato?(yes/no)").lower()
+            fight = input("Do you want to fight the Braverly Potato?(yes/no)").lower()
             while fight.lower() == "yes":
                 self.Hp -= 20
                 self.fight
