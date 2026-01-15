@@ -11,22 +11,29 @@ class npc:
         inventory = []
 
     def activity(self):
-        random.choices(self.dialogue)
-        print(random.choice)
-        random.choices(self.quest)
-        print(random.choice)
+        talk = random.choices(self.dialogue)
+        print(talk)
+        alert = random.choices(self.quest)
+        print(alert)
     
+    def talkself(self):
+        talk = random.choices(self.dialogue)
+        print(talk)
+
     def rejected(self):
         print("Goodbye! Thank you young lad!")
             
     def robbery(self):
-        random.choices(self.inventory)
-        if random.choice == "radish":
-            print("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
-            self.inventory.pop("radish")
-        elif random.choices == "groceries":
-            print("THEIRD THEIF")
-            self.inventory.pop("groceries")
+        item = random.choices(self.inventory)
+        if item == "radish":
+            print("NOOOOOOOOOOOOOOOOO!!!! WE CANNOT BOTH SHARE HIM")
+        elif item == "groceries":
+            print("KIDNAPPER!!!111! IM BABYSITTING THEM 11!!!")
+        elif item == "money":
+            print("I thought radish hood stole from the rich to give to the poor!! IM NOT RICH!111!!!!!!!!!!")
+        else:
+            print("oh sad! despair! but i am humble")
+        self.inventory.remove(item)
 
 Humble_Potato = npc("Humble Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["Hello young lad!"], ["radish", "groceries","money"])        
 
@@ -38,6 +45,6 @@ class anpc:
         print("big cough, help me get medicine psl")
         mc.talk
         print("thank yoaus kind sire")
-        self.stats -= 5
+        mc.health -= 5
         
-sick_potato = npc("sick Potato", ["No thank you, its ok, fan.", "nananaan im so humble", "nananaan walking my radish"], ["i am humble potato. i see to have a request for you young lad! My radish seems to have been gone for some time, can you help me find her?"], ["radish", "groceries","money"])
+sick_potato = npc("sick Potato", ["No thank you, its ok, fan."], ["i am humble potato. i see to have a request for you young lad! My radish seems to have been gone for some time, can you help me find her?"], ["radish", "groceries","money"])
