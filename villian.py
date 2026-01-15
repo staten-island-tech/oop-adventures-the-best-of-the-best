@@ -1,58 +1,64 @@
-class villian:
+
+class Villian:
     def __init__(self, name, inventory, Hp, dialogue, live):
         self.name = name
         self.inventory = inventory
         self.Hp = Hp
         self.dialogue = dialogue
         self.live = live
-    
-    def steal(self,item):
-        print("Let's steal")
-        stealing = input("Do you want to steal from the Humble Potato?(yes/no)").lower()
-        if stealing.lower() == "yes":
+
+    def steal(self, item):
+        stealing = input("Do you want to steal from the Humble Potato? (yes/no) ").lower()
+        if stealing == "yes":
             self.inventory.append(item)
-            print(King_of_Yam.__dict__)
-        elif stealing.lower() == "no":
-            print("Ok whatever")
+            print(self.__dict__)
+        elif stealing == "no":
+            print("Ok, whatever.")
         else:
-            print("Unvalid choice! Please put a yes or no")
+            print("Invalid choice! Please put yes or no.")
 
     def fight(self):
-            print("You see that guy over there?")
-            fight = input("Do you want to fight the Waverly Potato?(yes/no)").lower()
-            while fight.lower() == "yes":
-                self.Hp -= 20
-                self.fight
-                break
-            if fight.lower() == "no":
-                print(f"This is his Hp:{self.Hp}")
-                self.fight
-            else:
-                print("Unvalid choice! Please put a yes/no")
-    
+        fight = input("Do you want to fight the Waverly Potato? (yes/no) ").lower()
+        if fight == "yes":
+            self.Hp -= 20
+            print(f"You attacked! Hp is now {self.Hp}")
+        elif fight == "no":
+            print(f"This is his Hp: {self.Hp}")
+        else:
+            print("Invalid choice! Please type yes or no.")
+
     def talk(self):
-        print("Hey you see that potato. Let's go up to them")
-        speak = input("Who do you want to interact with?").lower()
-        if speak.lower() == "Waverly Potato":
+        speak = input("Who do you want to interact with? ").lower()
+        if speak == "waverly potato":
             print("Let's fight! I am so much better than you")
-        elif speak.lower() == "Humble Potato":
+        elif speak == "humble potato":
             print("Give me all your money")
         else: 
-            print("Character unfound! Please type an valid name")
+            print("Character not found! Please type a valid name.")
 
     def living(self):
         if 20 <= self.Hp <= 50:
-            print(f"He is at low health. This is his stats {self.Hp}" )
+            print(f"He is at low health. Stats: {self.Hp}")
         elif self.Hp <= 0:
-            self.live == False
+            self.live = False
             print("He is dead")
         else:
-            print(f"He is ok. This is his stats{self.Hp}")
-        
-King_of_Yam = villian("King of Yam", ["Prisoners of Yam"], 500, ["I'm am the all mighty King of Yam"], True)
-activites = input("What do you want to do?")
-print(King_of_Yam.__dict__)
+            print(f"He is ok. Stats: {self.Hp}")
 
+
+King_of_Yam = Villian("King of Yam", ["Prisoners of Yam"], 500, ["I am the all mighty King of Yam"], True)
+
+activity = input("What do you want to do? (steal/fight/talk/living) ").lower()
+if activity == "steal":
+    King_of_Yam.steal("Gold Coin")
+elif activity == "fight":
+    King_of_Yam.fight()
+elif activity == "talk":
+    King_of_Yam.talk()
+elif activity == "living":
+    King_of_Yam.living()
+else:
+    print("Invalid choice")
 
 
 
